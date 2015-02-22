@@ -7,7 +7,7 @@ use Git::Hooks;
 
 our $VERSION = '0.01';
 
-my $debug = qr/^[^#"'.]* (?: (?: binding\.pry | byebug | debug(?:ger)? ) [(\s@] ) /x;
+my $debug = qr/^[^#"'.]* (?: (?: binding\.pry | byebug | debug(?:ger)? ) [(\s@[{:] ) /x;
 my $extention = qr/\.(?:erb|haml|hbs|handlebars|rake|rb|ru|rhtml|slim|thor)$/;
 
 sub check_commit
