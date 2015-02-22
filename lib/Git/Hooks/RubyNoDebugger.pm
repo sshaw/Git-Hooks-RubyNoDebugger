@@ -28,7 +28,7 @@ sub check_commit
 	while(my $line = <$in>) {
 	    if($line =~ /$debug/) {
 		chomp $line;	# TODO: fix regex, it's now dependent on the newline.
-		$git->error(__PACKAGE__, "found debug statement '$line' at line $.\n");
+		$git->error(__PACKAGE__, "found debug statement '$line' at line $.");
 
 		$success = 0;
 	    }
