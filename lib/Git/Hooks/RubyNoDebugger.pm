@@ -20,7 +20,7 @@ sub check_commit
     $git->nocarp;
     # $git->get_config;
 
-    for my $file(@files) {
+    for my $file (@files) {
 	next unless $file =~ /$extention/;
 
 	open my $in, '<', $file or die $!;
@@ -28,7 +28,7 @@ sub check_commit
 	while(my $line = <$in>) {
 	    if($line =~ /$debug/) {
 		chomp $line;	# TODO: fix regex, it's now dependent on the newline.
-		$git->error(__PACKAGE__, "found debug statement '$line' at line $.");
+		$git->error(__PACKAGE__, "found debug statement '$line' in $file at line $.");
 
 		$success = 0;
 	    }
