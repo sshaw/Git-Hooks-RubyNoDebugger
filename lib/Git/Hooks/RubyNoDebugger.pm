@@ -17,7 +17,6 @@ sub check_commit
 
     my $success = 1;
 
-    $git->nocarp;
     # $git->get_config;
 
     for my $file (@files) {
