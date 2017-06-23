@@ -5,7 +5,7 @@ use warnings;
 
 use Git::Hooks;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 my $debug = qr/^[^#"'.]* (?: (?: binding\.pry | byebug | debug(?:ger)? ) [(\s@[{:] ) /x;
 my $extention = qr/\.(?:erb|haml|hbs|handlebars|rake|rb|ru|rhtml|slim|thor)$/;
@@ -53,6 +53,8 @@ Git::Hooks::RubyNoDebugger - Git::Hooks plugin that checks for calls to a Ruby d
 
 C<Git::Hooks::RubyNoDebugger> adds a pre-commit hook that looks for the invocation of a debugger.
 If one is detected the commit will be aborted.
+
+This version requires C<Git::Hooks> 2.0 or greater. For lower versions use 0.01 of this module.
 
 =head2 Setup
 

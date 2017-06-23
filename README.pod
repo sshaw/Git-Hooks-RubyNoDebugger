@@ -9,6 +9,8 @@ Git::Hooks::RubyNoDebugger - Git::Hooks plugin that checks for calls to a Ruby d
 C<Git::Hooks::RubyNoDebugger> adds a pre-commit hook that looks for the invocation of a debugger.
 If one is detected the commit will be aborted.
 
+This version requires C<Git::Hooks> 2.0 or greater. For lower versions use 0.01 of this module.
+
 =head2 Setup
 
 C<git config --add githooks.plugin RubyNoDebugger>
